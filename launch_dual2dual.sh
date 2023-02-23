@@ -15,4 +15,4 @@ poses_fic=/home/antoine/Documents/data/Sequence4/poses.txt
 
 echo "variables initialized"    
 
-./dual2dual $calib_file $image_dir 0 20 1 $mask $poses_fic 1
+./dual2dual $calib_file $image_dir 0 94 1 $mask $poses_fic 1

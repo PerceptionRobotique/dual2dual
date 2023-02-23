@@ -387,26 +387,26 @@ int main(int argc, char **argv)
         // save the equirectangular image
         s.str("");
         s.setf(std::ios::right, std::ios::adjustfield);
-        s << chemin << "/equi_convert_" << std::setfill('0') << std::setw(6) << imNum << "." << ext;
+        s << chemin << "/dual2dual/dual2dual_convert_" << std::setfill('0') << std::setw(6) << imNum << "." << ext;
         filename = s.str();
-        // cv::imwrite(filename, imgEr);
+        cv::imwrite(filename, imgOut);
 
         imNum += iStep;
         nbPass++;
     }
 
     // save times list to file
-    s.str("");
-    s.setf(std::ios::right, std::ios::adjustfield);
-    s << chemin << "/e_time_" << i0 << "_" << i360 << ".txt";
-    filename = s.str();
-    std::ofstream ficTime(filename.c_str());
-    std::vector<double>::iterator it_time = v_temps.begin();
-    for (; it_time != v_temps.end(); it_time++)
-    {
-        ficTime << *it_time << std::endl;
-    }
-    ficTime.close();
+    // s.str("");
+    // s.setf(std::ios::right, std::ios::adjustfield);
+    // s << chemin << "/e_time_" << i0 << "_" << i360 << ".txt";
+    // filename = s.str();
+    // std::ofstream ficTime(filename.c_str());
+    // std::vector<double>::iterator it_time = v_temps.begin();
+    // for (; it_time != v_temps.end(); it_time++)
+    // {
+    //     ficTime << *it_time << std::endl;
+    // }
+    // ficTime.close();
 
     return 0;
 }
